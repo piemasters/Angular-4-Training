@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< 147719118a34417cc52cfc509cfb9730a19532f3
 # Angular-4-Training
 Course found at: https://www.udemy.com/the-complete-guide-to-angular-2/learn/v4/overview
-=======
-# MyFirstApp
-=======
-# Angular-4-Training
-Course found at: https://www.udemy.com/the-complete-guide-to-angular-2/learn/v4/overview
->>>>>>> dddbe1ac4a995db8451290fe58e91bce727002a1
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
@@ -35,7 +27,3 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-<<<<<<< HEAD
->>>>>>> Assignment 2: Practicing Databinding
-=======
->>>>>>> dddbe1ac4a995db8451290fe58e91bce727002a1
