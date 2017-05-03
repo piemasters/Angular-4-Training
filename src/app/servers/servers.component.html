@@ -4,12 +4,16 @@
 <p>{{ serverName }}</p>
 <button class="btn btn-primary" [disabled]="!allowNewServer " (click)="onCreateServer() ">Add Server</button>
 <p [innerText]="serverCreationStatus "></p>
+<p *ngIf="serverCreated; else noServer">Server was created, server name is {{ serverName }}</p>
+<ng-template #noServer>
+    <p>No server was created!</p>
+</ng-template>
+
 <hr>
 <h2>Assignment 2: Practicing Databinding</h2>
 <input type="text" class="form-control" [(ngModel)]="username">
 <p>{{ username }}</p>
-<button class="btn btn-primary" [disabled]="!username" (click)="username = ''">Reset User</button>
+<button class="btn btn-primary" [disabled]="username === ''" (click)="username = ''">Reset User</button>
 
 <hr>
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>
