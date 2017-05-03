@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 <<<<<<< 147719118a34417cc52cfc509cfb9730a19532f3
+=======
+>>>>>>> dddbe1ac4a995db8451290fe58e91bce727002a1
 # Logs
 logs
 *.log
@@ -35,6 +38,7 @@ jspm_packages
 .npm
 
 # Optional REPL history
+<<<<<<< HEAD
 .node_repl_history
 =======
 # See http://help.github.com/ignore-files/ for more about ignoring files.
@@ -80,3 +84,6 @@ testem.log
 .DS_Store
 Thumbs.db
 >>>>>>> Assignment 2: Practicing Databinding
+=======
+.node_repl_history
+>>>>>>> dddbe1ac4a995db8451290fe58e91bce727002a1
