@@ -1,0 +1,30 @@
+Create new project:
+ng new project-name
+
+Run project:
+ng-serve
+
+Updating npm: 
+npm install -g npm
+
+Update angular-cli:
+npm uninstall -g angular-cli @angular/cli 
+npm cache clean 
+npm install -g @angular/cli
+
+Generate component (while app is running):
+ng generate component component-name 
+or 
+ng g c component-name 
+
+Component selector types:
+app-test   = <app-test></app-test>
+[app-test] = <div app-servers></div>
+.app-test  = <div class="app-test"></div>
+
+Databinding
+(event)="function()"
+[property]="variable"
+[(ngModel)]="variable" // Two way binding
+
+String Interpolation = {{ var }}
