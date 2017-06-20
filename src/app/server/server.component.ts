@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
 export class ServerComponent {
   serverId: number = 10;
   serverStatus: string = 'offline';
+  showPassword: boolean = false;
 
   constructor() {
     this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
@@ -20,5 +21,9 @@ export class ServerComponent {
 
   getColor() {
     return this.serverStatus === 'online' ? 'green' : 'red';
+  }
+
+  toggleShowPassword() {
+    this.showPassword = !this.showPassword;
   }
 }
