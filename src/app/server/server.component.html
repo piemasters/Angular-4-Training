@@ -1,1 +1,5 @@
 <p [ngStyle]="{'background-color': getColor()}" [ngClass]="{online: serverStatus === 'online'}">Server with ID {{serverId}} is {{getServerStatus()}}</p>
+
+<button class="btn btn-primary" (click)="event-handler()">Display Details</button>
+<button [disabled]="username === ''" (click)="toggleShowPassword()">Reset User</button>
+<p [ngStyle]="{'display-none': showPassword}">Secret Password = tuna</p>
