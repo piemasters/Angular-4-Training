@@ -4,18 +4,18 @@ ng new project-name
 Run project:
 ng-serve
 
-Updating npm: 
+Updating npm:
 npm install -g npm
 
 Update angular-cli:
-npm uninstall -g angular-cli @angular/cli 
-npm cache clean 
+npm uninstall -g angular-cli @angular/cli
+npm cache clean
 npm install -g @angular/cli
 
 Generate component (while app is running):
-ng generate component component-name 
-or 
-ng g c component-name 
+ng generate component component-name
+or
+ng g c component-name
 
 Component selector types:
 app-test   = <app-test></app-test>
@@ -28,3 +28,6 @@ Databinding
 [(ngModel)]="variable" // Two way binding
 
 String Interpolation = {{ var }}
+
+Create a recipe-list component within the recipes folder without a testing spec
+ng g c recipes/recipe-list --spec false
