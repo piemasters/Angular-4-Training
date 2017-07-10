@@ -2,5 +2,5 @@
 
 <button class="btn btn-primary" (click)="toggleShowPassword()">Display Details</button>
 
-<li *ngFor="let date of buttonTally" [ngStyle]="{'background-color': buttonTally.indexOf(date) > 3 ? 'blue' : 'transparent'}" [ngClass]="{online: buttonTally.indexOf(date) > 3}">{{date}}</li>
+<li *ngFor="let date of buttonTally; let i = index" [ngStyle]="{'background-color': i > 3 ? 'blue' : 'transparent'}" [ngClass]="{online: i > 3}">{{date}}</li>
 <p *ngIf="showPassword">Secret Password = tuna</p>
