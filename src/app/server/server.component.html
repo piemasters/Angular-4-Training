@@ -1,6 +1,6 @@
 <p [ngStyle]="{'background-color': getColor()}" [ngClass]="{online: serverStatus === 'online'}">Server with ID {{serverId}} is {{getServerStatus()}}</p>
-
-<button class="btn btn-primary" (click)="toggleShowPassword()">Display Details</button>
-
+<button class="btn btn-primary" (click)="toggleShowPassword()">Display Password</button>
+<p style="float: right" *ngIf="showPassword">Secret Password = tuna</p>
+<br>
 <li *ngFor="let date of buttonTally; let i = index" [ngStyle]="{'background-color': i > 3 ? 'blue' : 'transparent'}" [ngClass]="{online: i > 3}">{{date}}</li>
-<p *ngIf="showPassword">Secret Password = tuna</p>
+<br>
