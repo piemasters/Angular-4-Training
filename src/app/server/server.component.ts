@@ -10,6 +10,7 @@ export class ServerComponent {
   serverId: number = 10;
   serverStatus: string = 'offline';
   showPassword: boolean = false;
+  buttonTally = [];
 
   constructor() {
     this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
@@ -25,5 +26,7 @@ export class ServerComponent {
 
   toggleShowPassword() {
     this.showPassword = !this.showPassword;
+    this.buttonTally.push(new Date());
   }
+
 }
