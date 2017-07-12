@@ -1,6 +1,9 @@
 Update local repo to match server
 git reset --hard origin/master
 
+Debugging Angular on Chrome:
+https://chrome.google.com/webstore/detail/augury/elgalmkoelokbchhkhacckoklkejnhcd/related
+
 Create new project:
 ng new project-name
 
