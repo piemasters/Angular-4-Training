@@ -37,3 +37,10 @@ String Interpolation = {{ var }}
 
 Create a recipe-list component within the recipes folder without a testing spec
 ng g c recipes/recipe-list --spec false
+
+Angular View Encapsulation
+Styles only apply to their component, not to the project.
+Add the following into the component.ts:
+encapsulation: ViewEncapsulation.Emulated - normal
+encapsulation: ViewEncapsulation.None - disables view encapsulation
+encapsulation: ViewEncapsulation.Native - uses shadowdom where supported
