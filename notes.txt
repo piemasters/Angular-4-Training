@@ -33,7 +33,11 @@ Databinding
 [property]="variable"
 [(ngModel)]="variable" // Two way binding
 
-String Interpolation = {{ var }}
+Local reference
+<p #variable></p>
+
+String Interpolation
+{{ var }}
 
 Create a recipe-list component within the recipes folder without a testing spec
 ng g c recipes/recipe-list --spec false
@@ -44,3 +48,13 @@ Add the following into the component.ts:
 encapsulation: ViewEncapsulation.Emulated - normal
 encapsulation: ViewEncapsulation.None - disables view encapsulation
 encapsulation: ViewEncapsulation.Native - uses shadowdom where supported
+
+Lifecycle
+ngOnChanges - Called after a bound input property changes
+ngOnInit - Called once the component is initialized
+ngDoCheck - Called during every change detection run
+ngAfterContentInit - Called after content (ng-content) has been projected into view
+ngAfterContentChecked - Called every time the projected content has been checked
+ngAfterViewInit - Called after the component's view (and child views) has been initilised
+ngAfterViewChecked - Called every time the view (and child views) have been checked
+ngOnDestroy - Called once the component is about to be destroyed
