@@ -15,6 +15,10 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { CockpitComponent } from './cockpit/cockpit.component';
 import { ServerElementComponent } from './server-element/server-element.component';
+import { Assignment4Component } from './assignment4/assignment4.component';
+import { GameControlComponent } from './Assignment4/game-control/game-control.component';
+import { OddComponent } from './Assignment4/odd/odd.component';
+import { EvenComponent } from './Assignment4/even/even.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,11 @@ import { ServerElementComponent } from './server-element/server-element.componen
     ShoppingListComponent,
     ShoppingEditComponent,
     CockpitComponent,
-    ServerElementComponent
+    ServerElementComponent,
+    Assignment4Component,
+    GameControlComponent,
+    OddComponent,
+    EvenComponent
   ],
   imports: [
     BrowserModule,
