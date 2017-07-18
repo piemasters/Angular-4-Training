@@ -9,6 +9,7 @@ export class AppComponent {
   serverElements = [{type: 'server', name: 'Testserver', content: 'Just a test!'}];
   oddNumbers: number[] = [];
   evenNumbers: number[] = [];
+  loadedFeature = 'recipe';
 
     onServerAdded(serverData: {serverName: string, serverContent: string}) {
     this.serverElements.push({
@@ -32,6 +33,10 @@ export class AppComponent {
     } else {
       this.oddNumbers.push(firedNumber);
     }
+  }
+
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
   }
 
 }
