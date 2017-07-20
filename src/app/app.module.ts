@@ -1,3 +1,4 @@
+import { BasicHighlightDirective } from './section7/basic-highlight/basic-highlight.directive';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -39,7 +40,8 @@ import { DirectivesComponent } from './section7/directives/directives.component'
     GameControlComponent,
     OddComponent,
     EvenComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    BasicHighlightDirective
   ],
   imports: [
     BrowserModule,
