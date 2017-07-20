@@ -23,6 +23,7 @@ import { EvenComponent } from './Assignment4/even/even.component';
 import { DirectivesComponent } from './section7/directives/directives.component';
 import { BetterHighlighterDirective } from './section7/better-highlighter/betterhighlighter.directive';
 import { UnlessDirective } from './section7/unless/unless.directive';
+import { DropdownDirective } from './shopping/shared/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { UnlessDirective } from './section7/unless/unless.directive';
     DirectivesComponent,
     BasicHighlightDirective,
     BetterHighlighterDirective,
-    UnlessDirective
+    UnlessDirective,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
