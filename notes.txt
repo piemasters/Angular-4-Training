@@ -22,6 +22,7 @@ Generate component (while app is running):
 ng generate component component-name
 or
 ng g c component-name
+ng g d directive-name
 
 Component selector types:
 app-test   = <app-test></app-test>
@@ -63,6 +64,6 @@ Attribute Directives
 Look like a normal HTML attribute (possibly with databinding pr event binding)
 Only effrect/change the element they are added to
 
-Structural Directives
+Structural Directives (begins with a *)
 Look like a normal HTML attribute but have a leading * (for desugaring)
 Affect a whole area in the DOM (elements get added/removed)
