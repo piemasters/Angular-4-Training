@@ -1,3 +1,5 @@
+import { CounterService } from './assignment5/shared/counter.service';
+import { UsersService } from './assignment5/shared/users.service';
 import { LoggingService } from './section9/shared/logging.service';
 import { AccountsService } from './section9/shared/accounts.service';
 import { BasicHighlightDirective } from './section7/basic-highlight/basic-highlight.directive';
@@ -28,6 +30,8 @@ import { UnlessDirective } from './section7/unless/unless.directive';
 import { DropdownDirective } from './shopping/shared/dropdown.directive';
 import { AccountComponent } from './section9/account/account.component';
 import { NewAccountComponent } from './section9/new-account/new-account.component';
+import { ActiveUsersComponent } from './assignment5/active-users/active-users.component';
+import { InactiveUsersComponent } from './assignment5/inactive-users/inactive-users.component';
 
 @NgModule({
   declarations: [
@@ -53,14 +57,16 @@ import { NewAccountComponent } from './section9/new-account/new-account.componen
     UnlessDirective,
     DropdownDirective,
     AccountComponent,
-    NewAccountComponent
+    NewAccountComponent,
+    ActiveUsersComponent,
+    InactiveUsersComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [AccountsService, LoggingService],
+  providers: [AccountsService, LoggingService, UsersService, CounterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

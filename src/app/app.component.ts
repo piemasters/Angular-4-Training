@@ -1,3 +1,4 @@
+import { UsersService } from './assignment5/shared/users.service';
 import { AccountsService } from './section9/shared/accounts.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -14,7 +15,7 @@ export class AppComponent implements OnInit {
   loadedFeature = 'recipe';
   accounts: {name: string, status: string}[] = [];
 
-  constructor(private accountsService: AccountsService) {}
+  constructor(private accountsService: AccountsService, private userService: UsersService) {}
 
   ngOnInit() {
     this.accounts = this.accountsService.accounts;
