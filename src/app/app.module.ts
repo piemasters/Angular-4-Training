@@ -1,3 +1,5 @@
+import { LoggingService } from './section9/shared/logging.service';
+import { AccountsService } from './section9/shared/accounts.service';
 import { BasicHighlightDirective } from './section7/basic-highlight/basic-highlight.directive';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -58,7 +60,7 @@ import { NewAccountComponent } from './section9/new-account/new-account.componen
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [AccountsService, LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

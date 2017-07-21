@@ -67,3 +67,10 @@ Only effrect/change the element they are added to
 Structural Directives (begins with a *)
 Look like a normal HTML attribute but have a leading * (for desugaring)
 Affect a whole area in the DOM (elements get added/removed)
+
+Services
+List a service in the providers array to use a new instance of that service.
+If you don't list it in the providers array you use the shared instance.
+List the service in the app.modules providers array to ensure the same
+instance is used throught the app unless it is overriden.
+Add @Injectable() into a service you want to inject another service into.
