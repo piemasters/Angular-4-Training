@@ -1,3 +1,4 @@
+import { ShoppingListService } from './shopping/shopping-list/shopping-list.service';
 import { CounterService } from './assignment5/shared/counter.service';
 import { UsersService } from './assignment5/shared/users.service';
 import { LoggingService } from './section9/shared/logging.service';
@@ -66,7 +67,7 @@ import { InactiveUsersComponent } from './assignment5/inactive-users/inactive-us
     FormsModule,
     HttpModule
   ],
-  providers: [AccountsService, LoggingService, UsersService, CounterService],
+  providers: [AccountsService, LoggingService, UsersService, CounterService, ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
