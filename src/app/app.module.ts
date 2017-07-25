@@ -1,3 +1,4 @@
+import { ServersService } from './section11/servers/servers.service';
 import { ShoppingListService } from './shopping/shopping-list/shopping-list.service';
 import { CounterService } from './assignment5/shared/counter.service';
 import { UsersService } from './assignment5/shared/users.service';
@@ -33,6 +34,13 @@ import { AccountComponent } from './section9/account/account.component';
 import { NewAccountComponent } from './section9/new-account/new-account.component';
 import { ActiveUsersComponent } from './assignment5/active-users/active-users.component';
 import { InactiveUsersComponent } from './assignment5/inactive-users/inactive-users.component';
+import { HomeComponent } from './section11/home/home.component';
+import { UsersComponent } from './section11/users/users.component';
+import { EditServerComponent } from './section11/servers/edit-server/edit-server.component';
+import { UserComponent } from './section11/users/user/user.component';
+import { ServersRoutingComponent } from './section11/servers/servers.component';
+import { ServerRoutingComponent } from './section11/servers/server/server.component';
+
 
 @NgModule({
   declarations: [
@@ -60,14 +68,27 @@ import { InactiveUsersComponent } from './assignment5/inactive-users/inactive-us
     AccountComponent,
     NewAccountComponent,
     ActiveUsersComponent,
-    InactiveUsersComponent
+    InactiveUsersComponent,
+    HomeComponent,
+    UsersComponent,
+    EditServerComponent,
+    UserComponent,
+    ServersRoutingComponent,
+    ServerRoutingComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [AccountsService, LoggingService, UsersService, CounterService, ShoppingListService],
+  providers: [
+    AccountsService,
+    LoggingService,
+    UsersService,
+    CounterService,
+    ShoppingListService,
+    ServersService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
