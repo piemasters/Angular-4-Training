@@ -1,3 +1,4 @@
+import { ShoppingListService } from '../shopping-list/shopping-list.service';
 import { Ingredient } from '../shared/ingredient.model';
 import { Recipe } from './recipe.model';
 import { EventEmitter, Injectable } from '@angular/core';
@@ -26,11 +27,17 @@ export class RecipeService {
     ),
   ];
 
+  constructor(private shoppingListService: ShoppingListService) { }
+
   // The empty slice returns a copy rather than original array
   getRecipes() {
     return this.recipes.slice();
   }
 
-  constructor() { }
+  addIngredientsToShoppingList(ingredients: Ingredient[]) {
+    this.shoppingListService.addIngredients(ingredients);
+  }
+
+
 
 }
