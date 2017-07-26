@@ -1,3 +1,4 @@
+import { RouterModule, Routes } from '@angular/router';
 import { ServersService } from './section11/servers/servers.service';
 import { ShoppingListService } from './shopping/shopping-list/shopping-list.service';
 import { CounterService } from './assignment5/shared/counter.service';
@@ -41,6 +42,11 @@ import { UserComponent } from './section11/users/user/user.component';
 import { ServersRoutingComponent } from './section11/servers/servers.component';
 import { ServerRoutingComponent } from './section11/servers/server/server.component';
 
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'users', component: UsersComponent },
+  { path: 'servers', component: ServersRoutingComponent }
+]
 
 @NgModule({
   declarations: [
@@ -79,7 +85,8 @@ import { ServerRoutingComponent } from './section11/servers/server/server.compon
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [
     AccountsService,
