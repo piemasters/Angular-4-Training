@@ -41,6 +41,7 @@ import { EditServerComponent } from './section11/servers/edit-server/edit-server
 import { UserComponent } from './section11/users/user/user.component';
 import { ServersRoutingComponent } from './section11/servers/servers.component';
 import { ServerRoutingComponent } from './section11/servers/server/server.component';
+import { PageNotFoundComponent } from './section11/page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -53,7 +54,10 @@ const appRoutes: Routes = [
       { path: ':id', component: ServerRoutingComponent },
       { path: ':id/edit', component: EditServerComponent }
     ]
-  }
+  },
+  { path: 'not-found', component: PageNotFoundComponent },
+  { path: '**', redirectTo: '/not-found' } // Ensure this is the last path
+  // { path: '', redirectTo: '/somewhere-else', pathMatch: 'full' } // Redirect if the path is empty to /somewhere-else
 ]
 
 @NgModule({
@@ -88,7 +92,8 @@ const appRoutes: Routes = [
     EditServerComponent,
     UserComponent,
     ServersRoutingComponent,
-    ServerRoutingComponent
+    ServerRoutingComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
