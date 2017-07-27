@@ -44,9 +44,16 @@ import { ServerRoutingComponent } from './section11/servers/server/server.compon
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'users', component: UsersComponent },
-  { path: 'users/:id:/:name', component: UserComponent },
-  { path: 'servers', component: ServersRoutingComponent }
+  {
+    path: 'users', component: UsersComponent, children: [
+      { path: ':id:/:name', component: UserComponent },
+    ]
+  }, {
+    path: 'servers', component: ServersRoutingComponent, children: [
+      { path: ':id', component: ServerRoutingComponent },
+      { path: ':id/edit', component: EditServerComponent }
+    ]
+  }
 ]
 
 @NgModule({

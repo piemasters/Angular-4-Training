@@ -1,13 +1,15 @@
 import { ActivatedRoute, Params } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css']
 })
-export class UserComponent implements OnInit {
+export class UserComponent implements OnInit, OnDestroy {
   user: { id: number, name: string };
+  paramsSubscription: Subscription;
 
   constructor(private route: ActivatedRoute) { }
 
@@ -24,4 +26,8 @@ export class UserComponent implements OnInit {
     );
   }
 
+  // This is automatically done by Angular, it is only required when creating your own observables
+  public ngOnDestroy(): void {
+    // this.paramsSubscription.unsubscribe();
+  }
 }
