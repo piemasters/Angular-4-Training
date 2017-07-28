@@ -1,3 +1,4 @@
+import { CanDeactivateGuard } from './section11/servers/edit-server/can-deactivate-guard.service';
 import { AuthGuard } from './auth-guard.service';
 import { AuthService } from './auth.service';
 import { NgModule } from '@angular/core';
@@ -105,7 +106,8 @@ import { ServersService } from './section11/servers/servers.service';
     ShoppingListService,
     ServersService,
     AuthService,
-    AuthGuard
+    AuthGuard,
+    CanDeactivateGuard
   ],
   bootstrap: [AppComponent]
 })
