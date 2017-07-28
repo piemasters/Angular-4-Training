@@ -1,3 +1,4 @@
+import { ServerResolver } from './section11/servers/server/server-resolver.service';
 import { CanDeactivateGuard } from './section11/servers/edit-server/can-deactivate-guard.service';
 import { AuthGuard } from './auth-guard.service';
 import { AuthService } from './auth.service';
@@ -56,6 +57,7 @@ import { ServersRoutingComponent } from './section11/servers/servers.component';
 import { ServerRoutingComponent } from './section11/servers/server/server.component';
 import { PageNotFoundComponent } from './section11/page-not-found/page-not-found.component';
 import { ServersService } from './section11/servers/servers.service';
+import { ErrorPageComponent } from './section11/error-page/error-page.component';
 
 @NgModule({
   declarations: [
@@ -90,7 +92,8 @@ import { ServersService } from './section11/servers/servers.service';
     UserComponent,
     ServersRoutingComponent,
     ServerRoutingComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,
@@ -107,7 +110,8 @@ import { ServersService } from './section11/servers/servers.service';
     ServersService,
     AuthService,
     AuthGuard,
-    CanDeactivateGuard
+    CanDeactivateGuard,
+    ServerResolver
   ],
   bootstrap: [AppComponent]
 })
