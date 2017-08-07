@@ -1,3 +1,5 @@
+import { ObservableUserComponent } from './section13/observable-user/observable-user.component';
+import { ObservableHomeComponent } from './section13/observable-home/observable-home.component';
 import { RecipeEditComponent } from './shopping/recipes/recipe-edit/recipe-edit.component';
 import { RecipeDetailComponent } from './shopping/recipes/recipe-detail/recipe-detail.component';
 import { RecipeStartComponent } from './shopping/recipes/recipe-start/recipe-start.component';
@@ -19,14 +21,15 @@ import { NgModule } from '@angular/core';
 
 
 const appRoutes: Routes = [
-    { path: '', redirectTo: '/recipes', pathMatch: 'full' },
-    { path: 'recipes', component: RecipesComponent, children: [
-        { path: '', component: RecipeStartComponent },
-        { path: 'new', component: RecipeEditComponent },
-        { path: ':id', component: RecipeDetailComponent },
-        { path: ':id/edit', component: RecipeEditComponent }
-    ] },
-    { path: 'shopping-list', component: ShoppingListComponent },
+    // Shopping
+    // { path: '', redirectTo: '/recipes', pathMatch: 'full' },
+    // { path: 'recipes', component: RecipesComponent, children: [
+    //     { path: '', component: RecipeStartComponent },
+    //     { path: 'new', component: RecipeEditComponent },
+    //     { path: ':id', component: RecipeDetailComponent },
+    //     { path: ':id/edit', component: RecipeEditComponent }
+    // ] },
+    // { path: 'shopping-list', component: ShoppingListComponent },
 
     // Section 11
     // { path: '', component: HomeComponent },
@@ -48,6 +51,10 @@ const appRoutes: Routes = [
     // { path: 'not-found', component: ErrorPageComponent, data: {message: 'Page not found!'} },
     // { path: '**', redirectTo: '/not-found' } // Ensure this is the last path
     // // { path: '', redirectTo: '/somewhere-else', pathMatch: 'full' } // Redirect if the path is empty to /somewhere-else
+
+    // Section 13
+    { path: '', component: ObservableHomeComponent },
+    { path: 'user/:id', component: ObservableUserComponent }
 ]
 
 @NgModule({
