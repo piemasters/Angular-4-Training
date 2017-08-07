@@ -59,6 +59,7 @@ import { PageNotFoundComponent } from './section11/page-not-found/page-not-found
 import { ServersService } from './section11/servers/servers.service';
 import { ErrorPageComponent } from './section11/error-page/error-page.component';
 import { RecipeStartComponent } from './shopping/recipes/recipe-start/recipe-start.component';
+import { RecipeEditComponent } from './shopping/recipes/recipe-edit/recipe-edit.component';
 
 @NgModule({
   declarations: [
@@ -95,7 +96,8 @@ import { RecipeStartComponent } from './shopping/recipes/recipe-start/recipe-sta
     ServerRoutingComponent,
     PageNotFoundComponent,
     ErrorPageComponent,
-    RecipeStartComponent
+    RecipeStartComponent,
+    RecipeEditComponent
   ],
   imports: [
     BrowserModule,
