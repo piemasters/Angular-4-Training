@@ -1,3 +1,5 @@
+import { RecipeDetailComponent } from './shopping/recipes/recipe-detail/recipe-detail.component';
+import { RecipeStartComponent } from './shopping/recipes/recipe-start/recipe-start.component';
 import { ShoppingListComponent } from './shopping/shopping-list/shopping-list.component';
 import { RecipesComponent } from './shopping/recipes/recipes.component';
 import { ServerResolver } from './section11/servers/server/server-resolver.service';
@@ -17,7 +19,10 @@ import { NgModule } from '@angular/core';
 
 const appRoutes: Routes = [
     { path: '', redirectTo: '/recipes', pathMatch: 'full' },
-    { path: 'recipes', component: RecipesComponent },
+    { path: 'recipes', component: RecipesComponent, children: [
+        { path: '', component: RecipeStartComponent },
+        { path: ':id', component: RecipeDetailComponent }
+    ] },
     { path: 'shopping-list', component: ShoppingListComponent },
 
     // Section 11
