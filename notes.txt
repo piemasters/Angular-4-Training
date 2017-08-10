@@ -75,9 +75,9 @@ List the service in the app.modules providers array to ensure the same
 instance is used throught the app unless it is overriden.
 Add @Injectable() into a service you want to inject another service into.
 
-Observable
+Observable:
 Various data sources
 User input events, http requests, triggered in code...
-
-Observer
+Observer:
 Handle data, errors or compeletion
+Observables: Learn more at RxJS
