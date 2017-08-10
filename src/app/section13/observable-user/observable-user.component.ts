@@ -1,3 +1,4 @@
+import { ObsUsersService } from '../obs-users.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 
@@ -9,7 +10,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 export class ObservableUserComponent implements OnInit {
   id: number;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private usersService: ObsUsersService) { }
 
   ngOnInit() {
     this.route.params
@@ -18,6 +19,10 @@ export class ObservableUserComponent implements OnInit {
           this.id = +params['id'];
         }
       );
+  }
+
+  onActivate() {
+    this.usersService.userActivated.next(this.id);
   }
 
 }

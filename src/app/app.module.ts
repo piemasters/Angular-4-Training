@@ -1,3 +1,4 @@
+import { ObsUsersService } from './section13/obs-users.service';
 import { ServerResolver } from './section11/servers/server/server-resolver.service';
 import { CanDeactivateGuard } from './section11/servers/edit-server/can-deactivate-guard.service';
 import { AuthGuard } from './auth-guard.service';
@@ -119,7 +120,8 @@ import { ObservableUserComponent } from './section13/observable-user/observable-
     AuthService,
     AuthGuard,
     CanDeactivateGuard,
-    ServerResolver
+    ServerResolver,
+    ObsUsersService
   ],
   bootstrap: [AppComponent]
 })

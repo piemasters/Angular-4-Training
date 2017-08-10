@@ -1,3 +1,4 @@
+import { ObsUsersService } from './section13/obs-users.service';
 import { UsersService } from './assignment5/shared/users.service';
 import { AccountsService } from './section9/shared/accounts.service';
 import { Component, OnInit } from '@angular/core';
@@ -14,11 +15,22 @@ export class AppComponent implements OnInit {
   evenNumbers: number[] = [];
   loadedFeature = 'recipe';
   accounts: {name: string, status: string}[] = [];
+  user1Activated = false;
+  user2Activated = false;
 
-  constructor(private accountsService: AccountsService, private userService: UsersService) {}
+  constructor(private accountsService: AccountsService, private userService: UsersService, private obsUsersService: ObsUsersService) {}
 
   ngOnInit() {
     this.accounts = this.accountsService.accounts;
+    this.obsUsersService.userActivated.subscribe(
+      (id: number) => {
+        if (id === 1) {
+          this.user1Activated = true;
+        } else if (id === 2) {
+          this.user2Activated = true;
+        }
+      }
+    )
   }
 
   onServerAdded(serverData: { serverName: string, serverContent: string }) {
