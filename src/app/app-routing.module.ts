@@ -22,14 +22,14 @@ import { NgModule } from '@angular/core';
 
 const appRoutes: Routes = [
     // Shopping
-    // { path: '', redirectTo: '/recipes', pathMatch: 'full' },
-    // { path: 'recipes', component: RecipesComponent, children: [
-    //     { path: '', component: RecipeStartComponent },
-    //     { path: 'new', component: RecipeEditComponent },
-    //     { path: ':id', component: RecipeDetailComponent },
-    //     { path: ':id/edit', component: RecipeEditComponent }
-    // ] },
-    // { path: 'shopping-list', component: ShoppingListComponent },
+    { path: '', redirectTo: '/recipes', pathMatch: 'full' },
+    { path: 'recipes', component: RecipesComponent, children: [
+        { path: '', component: RecipeStartComponent },
+        { path: 'new', component: RecipeEditComponent },
+        { path: ':id', component: RecipeDetailComponent },
+        { path: ':id/edit', component: RecipeEditComponent }
+    ] },
+    { path: 'shopping-list', component: ShoppingListComponent },
 
     // Section 11
     // { path: '', component: HomeComponent },
@@ -53,8 +53,8 @@ const appRoutes: Routes = [
     // // { path: '', redirectTo: '/somewhere-else', pathMatch: 'full' } // Redirect if the path is empty to /somewhere-else
 
     // Section 13
-    { path: '', component: ObservableHomeComponent },
-    { path: 'user/:id', component: ObservableUserComponent }
+    // { path: '', component: ObservableHomeComponent },
+    // { path: 'user/:id', component: ObservableUserComponent }
 ]
 
 @NgModule({
