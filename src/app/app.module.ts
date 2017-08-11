@@ -108,7 +108,8 @@ import { ObservableUserComponent } from './section13/observable-user/observable-
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     AccountsService,

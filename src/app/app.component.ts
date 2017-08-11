@@ -3,6 +3,7 @@ import { UsersService } from './assignment5/shared/users.service';
 import { AccountsService } from './section9/shared/accounts.service';
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -59,6 +60,10 @@ export class AppComponent implements OnInit {
 
   onNavigate(feature: string) {
     this.loadedFeature = feature;
+  }
+
+  suggestUserName() {
+    const suggestedName = 'Superuser';
   }
 
 }
