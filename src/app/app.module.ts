@@ -63,6 +63,7 @@ import { RecipeStartComponent } from './shopping/recipes/recipe-start/recipe-sta
 import { RecipeEditComponent } from './shopping/recipes/recipe-edit/recipe-edit.component';
 import { ObservableHomeComponent } from './section13/observable-home/observable-home.component';
 import { ObservableUserComponent } from './section13/observable-user/observable-user.component';
+import { FormsComponent } from './section15/forms/forms.component';
 
 @NgModule({
   declarations: [
@@ -102,7 +103,8 @@ import { ObservableUserComponent } from './section13/observable-user/observable-
     RecipeStartComponent,
     RecipeEditComponent,
     ObservableHomeComponent,
-    ObservableUserComponent
+    ObservableUserComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,

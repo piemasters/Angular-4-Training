@@ -62,8 +62,4 @@ export class AppComponent implements OnInit {
     this.loadedFeature = feature;
   }
 
-  suggestUserName() {
-    const suggestedName = 'Superuser';
-  }
-
 }
