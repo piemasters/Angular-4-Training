@@ -64,6 +64,7 @@ import { RecipeEditComponent } from './shopping/recipes/recipe-edit/recipe-edit.
 import { ObservableHomeComponent } from './section13/observable-home/observable-home.component';
 import { ObservableUserComponent } from './section13/observable-user/observable-user.component';
 import { FormsComponent } from './section15/forms/forms.component';
+import { TestformComponent } from './assignment6/testform/testform.component';
 
 @NgModule({
   declarations: [
@@ -104,7 +105,8 @@ import { FormsComponent } from './section15/forms/forms.component';
     RecipeEditComponent,
     ObservableHomeComponent,
     ObservableUserComponent,
-    FormsComponent
+    FormsComponent,
+    TestformComponent
   ],
   imports: [
     BrowserModule,
