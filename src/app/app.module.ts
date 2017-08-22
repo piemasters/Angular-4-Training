@@ -5,7 +5,7 @@ import { AuthGuard } from './auth-guard.service';
 import { AuthService } from './auth.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
@@ -65,6 +65,7 @@ import { ObservableHomeComponent } from './section13/observable-home/observable-
 import { ObservableUserComponent } from './section13/observable-user/observable-user.component';
 import { FormsComponent } from './section15/forms/forms.component';
 import { TestformComponent } from './assignment6/testform/testform.component';
+import { ReactiveComponent } from './section15/reactive/reactive.component';
 
 @NgModule({
   declarations: [
@@ -106,14 +107,16 @@ import { TestformComponent } from './assignment6/testform/testform.component';
     ObservableHomeComponent,
     ObservableUserComponent,
     FormsComponent,
-    TestformComponent
+    TestformComponent,
+    ReactiveComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     AccountsService,
