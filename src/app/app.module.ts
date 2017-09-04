@@ -66,6 +66,7 @@ import { ObservableUserComponent } from './section13/observable-user/observable-
 import { FormsComponent } from './section15/forms/forms.component';
 import { TestformComponent } from './assignment6/testform/testform.component';
 import { ReactiveComponent } from './section15/reactive/reactive.component';
+import { ReactiveformComponent } from './assignment7/reactiveform/reactiveform.component';
 
 @NgModule({
   declarations: [
@@ -108,7 +109,8 @@ import { ReactiveComponent } from './section15/reactive/reactive.component';
     ObservableUserComponent,
     FormsComponent,
     TestformComponent,
-    ReactiveComponent
+    ReactiveComponent,
+    ReactiveformComponent
   ],
   imports: [
     BrowserModule,
