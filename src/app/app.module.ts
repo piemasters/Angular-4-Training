@@ -1,3 +1,4 @@
+import { RecipeService } from './shopping/recipes/recipe.service';
 import { ObsUsersService } from './section13/obs-users.service';
 import { ServerResolver } from './section11/servers/server/server-resolver.service';
 import { CanDeactivateGuard } from './section11/servers/edit-server/can-deactivate-guard.service';
@@ -131,7 +132,8 @@ import { ReactiveformComponent } from './assignment7/reactiveform/reactiveform.c
     AuthGuard,
     CanDeactivateGuard,
     ServerResolver,
-    ObsUsersService
+    ObsUsersService,
+    RecipeService
   ],
   bootstrap: [AppComponent]
 })
