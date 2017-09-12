@@ -68,6 +68,7 @@ import { FormsComponent } from './section15/forms/forms.component';
 import { TestformComponent } from './assignment6/testform/testform.component';
 import { ReactiveComponent } from './section15/reactive/reactive.component';
 import { ReactiveformComponent } from './assignment7/reactiveform/reactiveform.component';
+import { PipesComponent } from './section17/pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -111,7 +112,8 @@ import { ReactiveformComponent } from './assignment7/reactiveform/reactiveform.c
     FormsComponent,
     TestformComponent,
     ReactiveComponent,
-    ReactiveformComponent
+    ReactiveformComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,
