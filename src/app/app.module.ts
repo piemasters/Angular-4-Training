@@ -71,6 +71,8 @@ import { ReactiveComponent } from './section15/reactive/reactive.component';
 import { ReactiveformComponent } from './assignment7/reactiveform/reactiveform.component';
 import { PipesComponent } from './section17/pipes/pipes.component';
 import { FilterPipe } from './section17/pipes/filter.pipe';
+import { ReversePipe } from './section17/pipes/reverse.pipe';
+import { SortPipe } from './section17/pipes/sort.pipe';
 
 @NgModule({
   declarations: [
@@ -117,7 +119,9 @@ import { FilterPipe } from './section17/pipes/filter.pipe';
     ReactiveformComponent,
     PipesComponent,
     ShortenPipe,
-    FilterPipe
+    FilterPipe,
+    ReversePipe,
+    SortPipe
   ],
   imports: [
     BrowserModule,
