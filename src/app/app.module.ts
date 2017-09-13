@@ -1,3 +1,4 @@
+import { ShortenPipe } from './section17/pipes/shorten.pipe';
 import { RecipeService } from './shopping/recipes/recipe.service';
 import { ObsUsersService } from './section13/obs-users.service';
 import { ServerResolver } from './section11/servers/server/server-resolver.service';
@@ -69,6 +70,7 @@ import { TestformComponent } from './assignment6/testform/testform.component';
 import { ReactiveComponent } from './section15/reactive/reactive.component';
 import { ReactiveformComponent } from './assignment7/reactiveform/reactiveform.component';
 import { PipesComponent } from './section17/pipes/pipes.component';
+import { FilterPipe } from './section17/pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -113,7 +115,9 @@ import { PipesComponent } from './section17/pipes/pipes.component';
     TestformComponent,
     ReactiveComponent,
     ReactiveformComponent,
-    PipesComponent
+    PipesComponent,
+    ShortenPipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pipes.component.css']
 })
 export class PipesComponent {
-
+  appStatus = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('stable')
+    }, 2000);
+  });
   servers = [
     {
       instanceType: 'medium',
@@ -33,6 +37,17 @@ export class PipesComponent {
       started: new Date(15, 1, 2017)
     }
   ];
+
+  filteredStatus = '';
+
+  onAddServer() {
+    this.servers.push({
+      instanceType: 'small',
+      name: 'New Server',
+      status: 'stable',
+      started: new Date(15, 1, 2017)
+    })
+  }
 
   getStatusClasses(server: { instanceType: string, name: string, status: string, started: Date }) {
     return {

@@ -81,3 +81,6 @@ User input events, http requests, triggered in code...
 Observer:
 Handle data, errors or compeletion
 Observables: Learn more at RxJS
+
+Pipes
+ng g p pipename
