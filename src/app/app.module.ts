@@ -1,3 +1,4 @@
+import { ServerService } from './section18/http/server.service';
 import { ShortenPipe } from './section17/pipes/shorten.pipe';
 import { RecipeService } from './shopping/recipes/recipe.service';
 import { ObsUsersService } from './section13/obs-users.service';
@@ -73,6 +74,7 @@ import { PipesComponent } from './section17/pipes/pipes.component';
 import { FilterPipe } from './section17/pipes/filter.pipe';
 import { ReversePipe } from './section17/pipes/reverse.pipe';
 import { SortPipe } from './section17/pipes/sort.pipe';
+import { HttpComponent } from './section18/http/http.component';
 
 @NgModule({
   declarations: [
@@ -121,7 +123,8 @@ import { SortPipe } from './section17/pipes/sort.pipe';
     ShortenPipe,
     FilterPipe,
     ReversePipe,
-    SortPipe
+    SortPipe,
+    HttpComponent
   ],
   imports: [
     BrowserModule,
@@ -143,7 +146,8 @@ import { SortPipe } from './section17/pipes/sort.pipe';
     CanDeactivateGuard,
     ServerResolver,
     ObsUsersService,
-    RecipeService
+    RecipeService,
+    ServerService
   ],
   bootstrap: [AppComponent]
 })
