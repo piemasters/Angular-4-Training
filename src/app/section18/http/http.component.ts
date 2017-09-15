@@ -8,6 +8,8 @@ import { Response } from '@angular/http';
   styleUrls: ['./http.component.css']
 })
 export class HttpComponent {
+  appName = this.serverService.getAppName();
+
   servers = [
     {
       name: 'Testserver',
@@ -21,7 +23,7 @@ export class HttpComponent {
     }
   ];
 
-  constructor(private serverService: ServerService) {}
+  constructor(private serverService: ServerService) { }
 
   onAddServer(name: string) {
     this.servers.push({
@@ -38,18 +40,15 @@ export class HttpComponent {
     );
   }
 
-  private generateId() {
-    return Math.round(Math.random() * 10000);
-  }
-
   onGet() {
     this.serverService.getServers().subscribe(
-      (response: Response) => {
-        const data = response.json();
-        console.log(data);
-      },
+      (servers: any[]) => this.servers = servers,
       (error) => console.log(error)
     );
+  }
+
+  private generateId() {
+    return Math.round(Math.random() * 10000);
   }
 
 }
