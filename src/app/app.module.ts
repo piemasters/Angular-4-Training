@@ -1,3 +1,4 @@
+import { DataStorageService } from './shopping/shared/data-storage.service';
 import { ServerService } from './section18/http/server.service';
 import { ShortenPipe } from './section17/pipes/shorten.pipe';
 import { RecipeService } from './shopping/recipes/recipe.service';
@@ -147,7 +148,8 @@ import { HttpComponent } from './section18/http/http.component';
     ServerResolver,
     ObsUsersService,
     RecipeService,
-    ServerService
+    ServerService,
+    DataStorageService
   ],
   bootstrap: [AppComponent]
 })

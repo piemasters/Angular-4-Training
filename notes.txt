@@ -18,6 +18,44 @@ npm uninstall -g angular-cli @angular/cli
 npm cache clean
 npm install -g @angular/cli
 
+Update Major version of angular-cli:
+-----------------------------------------------------------------------
+https://github.com/angular/angular-cli/wiki/stories-1.0-update
+
+npm uninstall -g angular-cli          # Remove global package
+npm uninstall --save-dev angular-cli  # Remove from package.json
+npm uninstall -g @angular/cli         # Remove global package
+npm uninstall --save-dev @angular/cli # Remove from package.json
+
+rm -rf node_modules dist # Use rmdir on Windows
+rmdir C:\Users\nortondl\AppData\Roaming\npm-cache
+rmdir C:\Users\nortondl\AppData\Roaming\npm\node_modules\angular-cli
+rmdir C:\Users\nortondl\AppData\Roaming\npm\node_modules\@angular
+rmdir C:\Program Files\nodejs\node_modules\angular-cli
+rmdir C:\Program Files\nodejs\node_modules\@angular
+
+rm package-lock.json
+rmdir node_modules
+
+npm i -g npm npm-check
+npm-check -ug #to update globals
+npm-check -u #to update locals
+
+npm install
+
+update node/npm
+
+npm install -g @angular/cli@latest    # Global package
+
+npm install
+ng init
+ng build
+ng serve
+
+rm -Rf node_modules/
+npm update -D && npm update -S
+-----------------------------------------------------------------------
+
 Generate component (while app is running):
 ng generate component component-name
 or
