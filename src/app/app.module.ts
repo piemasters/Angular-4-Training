@@ -76,6 +76,8 @@ import { FilterPipe } from './section17/pipes/filter.pipe';
 import { ReversePipe } from './section17/pipes/reverse.pipe';
 import { SortPipe } from './section17/pipes/sort.pipe';
 import { HttpComponent } from './section18/http/http.component';
+import { SignupComponent } from './shopping/auth/signup/signup.component';
+import { SigninComponent } from './shopping/auth/signin/signin.component';
 
 @NgModule({
   declarations: [
@@ -125,7 +127,9 @@ import { HttpComponent } from './section18/http/http.component';
     FilterPipe,
     ReversePipe,
     SortPipe,
-    HttpComponent
+    HttpComponent,
+    SignupComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,

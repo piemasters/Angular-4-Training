@@ -1,3 +1,4 @@
+import { SignupComponent } from './shopping/auth/signup/signup.component';
 import { ObservableUserComponent } from './section13/observable-user/observable-user.component';
 import { ObservableHomeComponent } from './section13/observable-home/observable-home.component';
 import { RecipeEditComponent } from './shopping/recipes/recipe-edit/recipe-edit.component';
@@ -30,6 +31,7 @@ const appRoutes: Routes = [
         { path: ':id/edit', component: RecipeEditComponent }
     ] },
     { path: 'shopping-list', component: ShoppingListComponent },
+    { path: 'signup', component: SignupComponent }
 
     // Section 11
     // { path: '', component: HomeComponent },
