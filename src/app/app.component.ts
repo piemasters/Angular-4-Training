@@ -2,6 +2,7 @@ import { ObsUsersService } from './section13/obs-users.service';
 import { UsersService } from './assignment5/shared/users.service';
 import { AccountsService } from './section9/shared/accounts.service';
 import { Component, OnInit } from '@angular/core';
+import * as firebase from 'firebase';
 
 
 @Component({
@@ -22,6 +23,11 @@ export class AppComponent implements OnInit {
   constructor(private accountsService: AccountsService, private userService: UsersService, private obsUsersService: ObsUsersService) {}
 
   ngOnInit() {
+    firebase.initializeApp({
+      apiKey: "AIzaSyAd4iac6Ozaw-7STJBAJxOjEdAMdt7FBUI",
+      authDomain: "ng-recipe-book-3a818.firebaseapp.com"
+    });
+
     this.accounts = this.accountsService.accounts;
     this.obsUsersService.userActivated.subscribe(
       (id: number) => {

@@ -1,3 +1,4 @@
+import { AuthenticateService } from './shopping/auth/auth.service';
 import { DataStorageService } from './shopping/shared/data-storage.service';
 import { ServerService } from './section18/http/server.service';
 import { ShortenPipe } from './section17/pipes/shorten.pipe';
@@ -153,7 +154,8 @@ import { SigninComponent } from './shopping/auth/signin/signin.component';
     ObsUsersService,
     RecipeService,
     ServerService,
-    DataStorageService
+    DataStorageService,
+    AuthenticateService
   ],
   bootstrap: [AppComponent]
 })
