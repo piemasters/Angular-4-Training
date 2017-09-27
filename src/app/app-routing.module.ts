@@ -1,3 +1,4 @@
+import { AuthenticateGuard } from './shopping/auth/auth-guard.service';
 import { SigninComponent } from './shopping/auth/signin/signin.component';
 import { SignupComponent } from './shopping/auth/signup/signup.component';
 import { ObservableUserComponent } from './section13/observable-user/observable-user.component';
@@ -27,9 +28,9 @@ const appRoutes: Routes = [
     { path: '', redirectTo: '/recipes', pathMatch: 'full' },
     { path: 'recipes', component: RecipesComponent, children: [
         { path: '', component: RecipeStartComponent },
-        { path: 'new', component: RecipeEditComponent },
+        { path: 'new', component: RecipeEditComponent, canActivate: [AuthenticateGuard] },
         { path: ':id', component: RecipeDetailComponent },
-        { path: ':id/edit', component: RecipeEditComponent }
+        { path: ':id/edit', component: RecipeEditComponent, canActivate: [AuthenticateGuard] }
     ] },
     { path: 'shopping-list', component: ShoppingListComponent },
     { path: 'signup', component: SignupComponent },

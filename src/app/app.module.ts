@@ -1,3 +1,4 @@
+import { AuthenticateGuard } from './shopping/auth/auth-guard.service';
 import { AuthenticateService } from './shopping/auth/auth.service';
 import { DataStorageService } from './shopping/shared/data-storage.service';
 import { ServerService } from './section18/http/server.service';
@@ -155,7 +156,8 @@ import { SigninComponent } from './shopping/auth/signin/signin.component';
     RecipeService,
     ServerService,
     DataStorageService,
-    AuthenticateService
+    AuthenticateService,
+    AuthenticateGuard
   ],
   bootstrap: [AppComponent]
 })
