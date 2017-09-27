@@ -1,3 +1,5 @@
+import { SharedModule } from './shared/shared.module';
+import { RecipesModule } from './shopping/recipes/recipe.module';
 import { AuthenticateGuard } from './shopping/auth/auth-guard.service';
 import { AuthenticateService } from './shopping/auth/auth.service';
 import { DataStorageService } from './shopping/shared/data-storage.service';
@@ -20,14 +22,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { HeaderComponent } from './shopping/header/header.component';
 import { ShoppingListService } from './shopping/shopping-list/shopping-list.service';
-import { RecipesComponent } from './shopping/recipes/recipes.component';
-import { RecipeDetailComponent } from './shopping/recipes/recipe-detail/recipe-detail.component';
-import { RecipeListComponent } from './shopping/recipes/recipe-list/recipe-list.component';
-import { RecipeItemComponent } from './shopping/recipes/recipe-list/recipe-item/recipe-item.component';
 import { ShoppingListComponent } from './shopping/shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping/shopping-list/shopping-edit/shopping-edit.component';
-import { DropdownDirective } from './shopping/shared/dropdown.directive';
-
 
 import { OddComponent } from './assignment4/odd/odd.component';
 import { EvenComponent } from './assignment4/even/even.component';
@@ -65,8 +61,6 @@ import { ServerRoutingComponent } from './section11/servers/server/server.compon
 import { PageNotFoundComponent } from './section11/page-not-found/page-not-found.component';
 import { ServersService } from './section11/servers/servers.service';
 import { ErrorPageComponent } from './section11/error-page/error-page.component';
-import { RecipeStartComponent } from './shopping/recipes/recipe-start/recipe-start.component';
-import { RecipeEditComponent } from './shopping/recipes/recipe-edit/recipe-edit.component';
 import { ObservableHomeComponent } from './section13/observable-home/observable-home.component';
 import { ObservableUserComponent } from './section13/observable-user/observable-user.component';
 import { FormsComponent } from './section15/forms/forms.component';
@@ -85,13 +79,8 @@ import { SigninComponent } from './shopping/auth/signin/signin.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    RecipesComponent,
-    RecipeDetailComponent,
-    RecipeListComponent,
-    RecipeItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    DropdownDirective,
     OddComponent,
     EvenComponent,
     Assignment4Component,
@@ -116,8 +105,6 @@ import { SigninComponent } from './shopping/auth/signin/signin.component';
     ServerRoutingComponent,
     PageNotFoundComponent,
     ErrorPageComponent,
-    RecipeStartComponent,
-    RecipeEditComponent,
     ObservableHomeComponent,
     ObservableUserComponent,
     FormsComponent,
@@ -139,7 +126,9 @@ import { SigninComponent } from './shopping/auth/signin/signin.component';
     HttpModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RecipesModule,
+    SharedModule
   ],
   providers: [
     AccountsService,

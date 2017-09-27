@@ -26,12 +26,6 @@ import { NgModule } from '@angular/core';
 const appRoutes: Routes = [
     // Shopping
     { path: '', redirectTo: '/recipes', pathMatch: 'full' },
-    { path: 'recipes', component: RecipesComponent, children: [
-        { path: '', component: RecipeStartComponent },
-        { path: 'new', component: RecipeEditComponent, canActivate: [AuthenticateGuard] },
-        { path: ':id', component: RecipeDetailComponent },
-        { path: ':id/edit', component: RecipeEditComponent, canActivate: [AuthenticateGuard] }
-    ] },
     { path: 'shopping-list', component: ShoppingListComponent },
     { path: 'signup', component: SignupComponent },
     { path: 'signin', component: SigninComponent }
