@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./servers.component.css']
 })
 export class ServersRoutingComponent implements OnInit {
-  private servers: { id: number, name: string, status: string }[] = [];
+  servers: { id: number, name: string, status: string }[] = [];
 
   constructor (
     private serversService: ServersService,
@@ -22,7 +22,7 @@ export class ServersRoutingComponent implements OnInit {
 
   onReload() {
     // this.router.navigate(['servers'], { relativeTo: this.route});
-    this.router.navigate(['servers']);
+    this.router.navigate(['section11/servers']);
   }
 
 }

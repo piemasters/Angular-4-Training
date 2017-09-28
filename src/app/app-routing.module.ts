@@ -1,60 +1,36 @@
-import { AuthenticateGuard } from './shopping/auth/auth-guard.service';
-import { SigninComponent } from './shopping/auth/signin/signin.component';
-import { SignupComponent } from './shopping/auth/signup/signup.component';
-import { ObservableUserComponent } from './section13/observable-user/observable-user.component';
-import { ObservableHomeComponent } from './section13/observable-home/observable-home.component';
-import { RecipeEditComponent } from './shopping/recipes/recipe-edit/recipe-edit.component';
-import { RecipeDetailComponent } from './shopping/recipes/recipe-detail/recipe-detail.component';
-import { RecipeStartComponent } from './shopping/recipes/recipe-start/recipe-start.component';
-import { ShoppingListComponent } from './shopping/shopping-list/shopping-list.component';
-import { RecipesComponent } from './shopping/recipes/recipes.component';
-import { ServerResolver } from './section11/servers/server/server-resolver.service';
-import { ErrorPageComponent } from './section11/error-page/error-page.component';
-import { CanDeactivateGuard } from './section11/servers/edit-server/can-deactivate-guard.service';
-import { AuthGuard } from './auth-guard.service';
-import { PageNotFoundComponent } from './section11/page-not-found/page-not-found.component';
-import { EditServerComponent } from './section11/servers/edit-server/edit-server.component';
-import { ServerRoutingComponent } from './section11/servers/server/server.component';
-import { ServersRoutingComponent } from './section11/servers/servers.component';
-import { UserComponent } from './section11/users/user/user.component';
-import { UsersComponent } from './section11/users/users.component';
-import { HomeComponent } from './section11/home/home.component';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
-
+import { ShoppingListComponent } from './shopping/shopping-list/shopping-list.component';
+import {Assignment4Component} from './assignment4/assignment4.component';
+import {Assignment5Component} from './assignment5/assignment5.component';
+import {TestformComponent} from './assignment6/testform/testform.component';
+import {ReactiveformComponent} from 'app/assignment7/reactiveform/reactiveform.component';
+import {Section3Component} from './section3/section3.component';
+import {Section5Component} from './section5/section5.component';
+import {Section7Component} from './section7/section7.component';
+import {Section9Component} from './section9/section9.component';
+import {Section15Component} from './section15/section15.component';
+import {Section17Component} from './section17/section17.component';
+import {HttpComponent} from './section18/http/http.component';
+import {ErrorPageComponent} from './section11/error-page/error-page.component';
 
 const appRoutes: Routes = [
-    // Shopping
-    { path: '', redirectTo: '/recipes', pathMatch: 'full' },
-    { path: 'shopping-list', component: ShoppingListComponent },
-    { path: 'signup', component: SignupComponent },
-    { path: 'signin', component: SigninComponent }
-
-    // Section 11
-    // { path: '', component: HomeComponent },
-    // {
-    //     path: 'users', component: UsersComponent, children: [
-    //         { path: ':id:/:name', component: UserComponent },
-    //     ]
-    // }, {
-    //     path: 'servers',
-    //     // canActivate: [AuthGuard],
-    //     canActivateChild: [AuthGuard],
-    //     component: ServersRoutingComponent,
-    //     children: [
-    //         { path: ':id', component: ServerRoutingComponent, resolve: {server: ServerResolver} },
-    //         { path: ':id/edit', component: EditServerComponent, canDeactivate: [CanDeactivateGuard] }
-    //     ]
-    // },
-    // // { path: 'not-found', component: PageNotFoundComponent },
-    // { path: 'not-found', component: ErrorPageComponent, data: {message: 'Page not found!'} },
-    // { path: '**', redirectTo: '/not-found' } // Ensure this is the last path
-    // // { path: '', redirectTo: '/somewhere-else', pathMatch: 'full' } // Redirect if the path is empty to /somewhere-else
-
-    // Section 13
-    // { path: '', component: ObservableHomeComponent },
-    // { path: 'user/:id', component: ObservableUserComponent }
-]
+  { path: 'assignment4', component: Assignment4Component },
+  { path: 'assignment5', component: Assignment5Component },
+  { path: 'assignment6', component: TestformComponent },
+  { path: 'assignment7', component: ReactiveformComponent },
+  { path: 'section3', component: Section3Component },
+  { path: 'section5', component: Section5Component },
+  { path: 'section7', component: Section7Component },
+  { path: 'section9', component: Section9Component },
+  { path: 'section15', component: Section15Component },
+  { path: 'section17', component: Section17Component },
+  { path: 'section18', component: HttpComponent },
+  { path: '', redirectTo: '/recipes', pathMatch: 'full' },
+  { path: 'shopping-list', component: ShoppingListComponent },
+  {path: 'not-found', component: ErrorPageComponent, data: {message: 'Page not found!'}},
+  // {path: '**', redirectTo: '/not-found'} // Ensure this is the last path
+];
 
 @NgModule({
     imports: [
