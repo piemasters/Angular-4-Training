@@ -46,6 +46,10 @@ import { Section15Module } from './section15/section15.module';
 import { Section17Component } from './section17/section17.component';
 import { Section17Module } from './section17/section17.module';
 
+// Section 18
+import { HttpComponent } from './section18/http/http.component';
+import { ServerService } from './section18/http/server.service';
+
 // Assignment 4
 import { Assignment4Component } from './assignment4/assignment4.component';
 import { Assignment4Module } from './assignment4/assignment4.module';
@@ -67,7 +71,6 @@ import { HeaderComponent } from './shopping/header/header.component';
 import { ShoppingListService } from './shopping/shopping-list/shopping-list.service';
 import { AuthenticateModule } from './shopping/auth/auth.module';
 import { ShoppingListModule } from './shopping/shopping-list/shopping-list.module';
-import { RecipesModule } from './shopping/recipes/recipe.module';
 import { AuthenticateGuard } from './shopping/auth/auth-guard.service';
 import { AuthenticateService } from './shopping/auth/auth.service';
 import { DataStorageService } from './shopping/shared/data-storage.service';
@@ -77,20 +80,12 @@ import { RecipeService } from './shopping/recipes/recipe.service';
 import { SharedModule } from './shared/shared.module';
 import { AuthGuard } from './auth-guard.service';
 import { AuthService } from './auth.service';
-
-
-import { HttpComponent } from './section18/http/http.component';
-import { ServerService } from './section18/http/server.service';
-
-
-
-
-
-
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent, // Angular
+    HomeComponent,
     Section3Component, // Section 3
     Section5Component, // Section 5
     Section7Component, // Section 7
@@ -104,7 +99,7 @@ import { ServerService } from './section18/http/server.service';
     Assignment5Component, // Assignment 5
     TestformComponent, // Assignment 6
     ReactiveformComponent, // Assignment 7
-    HeaderComponent // Shopping
+    HeaderComponent, // Shopping
   ],
   imports: [
     BrowserModule, // Angular
@@ -122,7 +117,6 @@ import { ServerService } from './section18/http/server.service';
     Section17Module, // Section 17
     Assignment4Module, // Assignment 4
     Assignment5Module, // Assignment 5
-    RecipesModule, // Shopping
     ShoppingListModule, // Shopping
     AuthenticateModule, // Shopping
     SharedModule // Shopping

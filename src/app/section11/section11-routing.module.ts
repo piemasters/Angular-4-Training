@@ -1,5 +1,5 @@
 import {RouterModule, Routes} from '@angular/router';
-import {HomeComponent} from './home/home.component';
+import {Section11HomeComponent} from './home/home.component';
 import {UsersComponent} from './users/users.component';
 import {UserComponent} from './users/user/user.component';
 import {AuthGuard} from '../auth-guard.service';
@@ -15,7 +15,7 @@ import {Section11Component} from './section11.component';
 const section11Routes: Routes = [
   {
     path: 'section11', component: Section11Component, children: [
-    {path: '', component: HomeComponent},
+    {path: '', component: Section11HomeComponent},
     {
       path: 'users', component: UsersComponent, children: [
       {path: ':id:/:name', component: UserComponent},
