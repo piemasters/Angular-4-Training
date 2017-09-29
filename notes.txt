@@ -122,3 +122,6 @@ Observables: Learn more at RxJS
 
 Pipes
 ng g p pipename
+
+Ahead of time compilation:
+ng build --prod --aot

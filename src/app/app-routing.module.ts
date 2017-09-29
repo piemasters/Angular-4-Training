@@ -13,10 +13,12 @@ import {Section15Component} from './section15/section15.component';
 import {Section17Component} from './section17/section17.component';
 import {HttpComponent} from './section18/http/http.component';
 import {ErrorPageComponent} from './section11/error-page/error-page.component';
-import {HomeComponent} from './home/home.component';
+import {ApphomeComponent} from './apphome/apphome.component';
+import {ShoppingComponent} from './shopping/shopping.component';
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: ApphomeComponent },
+  { path: 'shopping', loadChildren: './shopping/shopping.module#ShoppingModule' }, // component: ShoppingComponent },
   { path: 'assignment4', component: Assignment4Component },
   { path: 'assignment5', component: Assignment5Component },
   { path: 'assignment6', component: TestformComponent },
@@ -28,9 +30,6 @@ const appRoutes: Routes = [
   { path: 'section15', component: Section15Component },
   { path: 'section17', component: Section17Component },
   { path: 'section18', component: HttpComponent },
-  { path: 'recipes', loadChildren: './shopping/recipes/recipe.module#RecipesModule'},
-  { path: 'shopping-list', component: ShoppingListComponent },
-  {path: 'not-found', component: ErrorPageComponent, data: {message: 'Page not found!'}},
   // {path: '**', redirectTo: '/not-found'} // Ensure this is the last path
 ];
 

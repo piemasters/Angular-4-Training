@@ -7,16 +7,17 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const recipesRoutes: Routes = [
-    { path: '', component: RecipesComponent, children: [
+    { path: 'recipes', component: RecipesComponent, children: [
       { path: '', component: RecipeStartComponent },
-        { path: 'new', component: RecipeEditComponent, canActivate: [AuthenticateGuard] },
-        { path: ':id', component: RecipeDetailComponent },
-        { path: ':id/edit', component: RecipeEditComponent, canActivate: [AuthenticateGuard] }
+      { path: 'new', component: RecipeEditComponent, canActivate: [AuthenticateGuard] },
+      { path: ':id', component: RecipeDetailComponent },
+      { path: ':id/edit', component: RecipeEditComponent, canActivate: [AuthenticateGuard] }
     ] },
 ];
 
 @NgModule({
     imports: [ RouterModule.forChild(recipesRoutes) ],
-    exports: [RouterModule]
+    exports: [RouterModule],
+    providers: [ AuthenticateGuard ]
 })
 export class RecipesRoutingModule {}

@@ -67,25 +67,20 @@ import { TestformComponent } from './assignment6/testform/testform.component';
 import { ReactiveformComponent } from './assignment7/reactiveform/reactiveform.component';
 
 // Shopping
-import { HeaderComponent } from './shopping/header/header.component';
-import { ShoppingListService } from './shopping/shopping-list/shopping-list.service';
-import { AuthenticateModule } from './shopping/auth/auth.module';
-import { ShoppingListModule } from './shopping/shopping-list/shopping-list.module';
-import { AuthenticateGuard } from './shopping/auth/auth-guard.service';
-import { AuthenticateService } from './shopping/auth/auth.service';
-import { DataStorageService } from './shopping/shared/data-storage.service';
-import { RecipeService } from './shopping/recipes/recipe.service';
+import { ShoppingComponent } from './shopping/shopping.component';
+import {ShoppingModule} from './shopping/shopping.module';
 
 // Shared
 import { SharedModule } from './shared/shared.module';
 import { AuthGuard } from './auth-guard.service';
 import { AuthService } from './auth.service';
-import { HomeComponent } from './home/home.component';
+import { ApphomeComponent } from './apphome/apphome.component';
+
 
 @NgModule({
   declarations: [
     AppComponent, // Angular
-    HomeComponent,
+    ApphomeComponent, // Angular
     Section3Component, // Section 3
     Section5Component, // Section 5
     Section7Component, // Section 7
@@ -99,7 +94,6 @@ import { HomeComponent } from './home/home.component';
     Assignment5Component, // Assignment 5
     TestformComponent, // Assignment 6
     ReactiveformComponent, // Assignment 7
-    HeaderComponent, // Shopping
   ],
   imports: [
     BrowserModule, // Angular
@@ -117,9 +111,7 @@ import { HomeComponent } from './home/home.component';
     Section17Module, // Section 17
     Assignment4Module, // Assignment 4
     Assignment5Module, // Assignment 5
-    ShoppingListModule, // Shopping
-    AuthenticateModule, // Shopping
-    SharedModule // Shopping
+    ShoppingModule, // Shopping
   ],
   providers: [
     AccountsService, // Section 9
@@ -131,11 +123,6 @@ import { HomeComponent } from './home/home.component';
     ServerService, // Section 18
     UsersService, // Assignment 5
     CounterService, // Assignment 5
-    RecipeService, // Shopping
-    ShoppingListService, // Shopping
-    AuthenticateService, // Shopping
-    AuthenticateGuard, // Shopping
-    DataStorageService, // Shopping
     AuthService,
     AuthGuard
   ],
