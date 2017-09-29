@@ -71,7 +71,6 @@ import { ShoppingComponent } from './shopping/shopping.component';
 import {ShoppingModule} from './shopping/shopping.module';
 
 // Shared
-import { SharedModule } from './shared/shared.module';
 import { AuthGuard } from './auth-guard.service';
 import { AuthService } from './auth.service';
 import { ApphomeComponent } from './apphome/apphome.component';

@@ -1,6 +1,5 @@
-import { Routes, RouterModule } from '@angular/router';
+import {Routes, RouterModule, PreloadAllModules} from '@angular/router';
 import { NgModule } from '@angular/core';
-import { ShoppingListComponent } from './shopping/shopping-list/shopping-list.component';
 import {Assignment4Component} from './assignment4/assignment4.component';
 import {Assignment5Component} from './assignment5/assignment5.component';
 import {TestformComponent} from './assignment6/testform/testform.component';
@@ -12,13 +11,11 @@ import {Section9Component} from './section9/section9.component';
 import {Section15Component} from './section15/section15.component';
 import {Section17Component} from './section17/section17.component';
 import {HttpComponent} from './section18/http/http.component';
-import {ErrorPageComponent} from './section11/error-page/error-page.component';
 import {ApphomeComponent} from './apphome/apphome.component';
-import {ShoppingComponent} from './shopping/shopping.component';
 
 const appRoutes: Routes = [
   { path: '', component: ApphomeComponent },
-  { path: 'shopping', loadChildren: './shopping/shopping.module#ShoppingModule' }, // component: ShoppingComponent },
+  { path: 'shopping', loadChildren: './shopping/shopping.module#ShoppingModule' },
   { path: 'assignment4', component: Assignment4Component },
   { path: 'assignment5', component: Assignment5Component },
   { path: 'assignment6', component: TestformComponent },
@@ -35,7 +32,7 @@ const appRoutes: Routes = [
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(appRoutes)
+        RouterModule.forRoot(appRoutes, {preloadingStrategy: PreloadAllModules})
         // RouterModule.forRoot(appRoutes, {useHash: true})
     ],
     exports: [RouterModule]
