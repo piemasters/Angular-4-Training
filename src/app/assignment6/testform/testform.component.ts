@@ -8,12 +8,12 @@ import { NgForm } from '@angular/forms';
 })
 export class TestformComponent implements OnInit {
   @ViewChild('demoform') signupForm: NgForm;
-  subscription = "advanced";
+  subscriptions = ['Basic', 'Advanced', 'Pro'];
   password = '';
   submitted = false;
   user = {
     email: '',
-    subscription: 'advanced',
+    subscription: this.subscriptions[0],
     password: ''
   };
 

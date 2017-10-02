@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
 
 export class HeaderComponent {
 
-  constructor(private dataStorageService: DataStorageService, private authService: AuthenticateService) { }
+  constructor(private dataStorageService: DataStorageService, public authService: AuthenticateService) { }
 
   onSaveData() {
     this.dataStorageService.storeRecipes().subscribe(

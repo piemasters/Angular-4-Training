@@ -21,7 +21,7 @@
 
                 <div class="form-group">
                     <label for="status">Project Status</label>
-                    <select id="status" class="form-control" [ngModel]="status" formControlName="status">
+                    <select id="status" class="form-control" formControlName="status">
                         <option *ngFor="let status of statuses" >{{ status }}</option>
                     </select>
                 </div>

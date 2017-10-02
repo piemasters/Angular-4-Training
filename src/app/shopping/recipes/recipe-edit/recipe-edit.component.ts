@@ -26,6 +26,10 @@ export class RecipeEditComponent implements OnInit {
     );
   }
 
+  get formIngredients() {
+    return <FormArray>this.recipeForm.get('ingredients');
+  }
+
   onSubmit() {
     // const newRecipe = new Recipe(
     //   this.recipeForm.value['name'],

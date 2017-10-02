@@ -44,6 +44,10 @@ export class ReactiveComponent implements OnInit {
     });
   }
 
+  get formHobbies() {
+    return <FormArray>this.signupForm.get('hobbies');
+  }
+
   onSubmit() {
     console.log(this.signupForm);
     this.signupForm.reset();
