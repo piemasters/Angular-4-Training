@@ -125,3 +125,6 @@ ng g p pipename
 
 Ahead of time compilation:
 ng build --prod --aot
+
+Change base ref for build
+ng build --prod --aot --base-href /my-app/
