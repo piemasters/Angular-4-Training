@@ -110,14 +110,14 @@ Services
 List a service in the providers array to use a new instance of that service.
 If you don't list it in the providers array you use the shared instance.
 List the service in the app.modules providers array to ensure the same
-instance is used throught the app unless it is overriden.
+instance is used throughout the app unless it is overridden.
 Add @Injectable() into a service you want to inject another service into.
 
 Observable:
 Various data sources
 User input events, http requests, triggered in code...
 Observer:
-Handle data, errors or compeletion
+Handle data, errors or completion
 Observables: Learn more at RxJS
 
 Pipes
