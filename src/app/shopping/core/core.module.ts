@@ -4,7 +4,6 @@ import {HomeComponent} from './home/home.component';
 import {SharedModule} from '../../shared/shared.module';
 import {ShoppingRoutingModule} from '../shopping-routing.module';
 import {RecipeService} from '../recipes/recipe.service';
-import {ShoppingListService} from '../shopping-list/shopping-list.service';
 import {AuthenticateService} from '../auth/auth.service';
 import {DataStorageService} from '../shared/data-storage.service';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -26,7 +25,6 @@ import {LoggingInterceptor} from '../shared/logging.interceptor';
   ],
   providers: [
     RecipeService,
-    ShoppingListService,
     AuthenticateService,
     DataStorageService,
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
