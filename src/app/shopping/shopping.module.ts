@@ -7,6 +7,8 @@ import {ShoppingListModule} from './shopping-list/shopping-list.module';
 import {AuthenticateModule} from './auth/auth.module';
 import {CoreModule} from './core/core.module';
 import {RecipesModule} from './recipes/recipe.module';
+import {StoreModule} from '@ngrx/store';
+import {shoppingListReducer} from "./shopping-list/store/shopping-list.reducers";
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import {RecipesModule} from './recipes/recipe.module';
     ShoppingListModule,
     AuthenticateModule,
     CoreModule,
-    RecipesModule
+    RecipesModule,
+    StoreModule.forRoot({shoppingList: shoppingListReducer})
   ],
   bootstrap: [ShoppingComponent]
 })
