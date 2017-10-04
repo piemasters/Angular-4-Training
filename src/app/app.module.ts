@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
+import {StoreModule} from '@ngrx/store';
 
 // App
 import { AppComponent } from './app.component';
@@ -70,6 +71,7 @@ import { ReactiveformComponent } from './assignment7/reactiveform/reactiveform.c
 // Shopping
 import { ShoppingComponent } from './shopping/shopping.component';
 import {ShoppingModule} from './shopping/shopping.module';
+import {reducers} from './shopping/store/shopping.reducers';
 
 // Shared
 import { AuthGuard } from './auth-guard.service';
@@ -113,6 +115,7 @@ import { ApphomeComponent } from './apphome/apphome.component';
     Assignment4Module, // Assignment 4
     Assignment5Module, // Assignment 5
     ShoppingModule, // Shopping
+    StoreModule.forRoot(reducers)
   ],
   providers: [
     AccountsService, // Section 9

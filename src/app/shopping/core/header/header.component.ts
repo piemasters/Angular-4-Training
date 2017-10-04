@@ -1,7 +1,10 @@
 import {AuthenticateService} from '../../auth/auth.service';
-import {HttpEvent, HttpEventType} from '@angular/common/http';
 import {DataStorageService} from '../../shared/data-storage.service';
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Store} from '@ngrx/store';
+import * as fromShopping from '../../store/shopping.reducers';
+import * as fromAuth from '../../auth/store/auth.reducers';
+import {Observable} from 'rxjs/Observable';
 
 @Component({
   selector: 'app-header',
@@ -9,9 +12,17 @@ import {Component} from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
+  authState: Observable<fromAuth.State>;
 
-  constructor(private dataStorageService: DataStorageService, public authService: AuthenticateService) {
+  constructor(
+    private dataStorageService: DataStorageService,
+    public authService: AuthenticateService,
+    private store: Store<fromShopping.AppState>
+  ) { }
+
+  ngOnInit() {
+    this.authState = this.store.select('auth');
   }
 
   onSaveData() {
@@ -19,9 +30,6 @@ export class HeaderComponent {
       (response) => {
         console.log(response);
       }
-      // (response: HttpEvent<Object>) => {
-      //   console.log(response.type === HttpEventType.Sent);
-      // }
     );
   }
 

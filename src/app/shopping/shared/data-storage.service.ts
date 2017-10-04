@@ -3,6 +3,7 @@ import {Recipe} from '../recipes/recipe.model';
 import {RecipeService} from '../recipes/recipe.service';
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders, HttpParams, HttpRequest} from '@angular/common/http';
+import 'rxjs/Rx';
 
 @Injectable()
 export class DataStorageService {
