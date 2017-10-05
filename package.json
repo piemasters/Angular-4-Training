@@ -21,6 +21,7 @@
     "@angular/platform-browser": "^4.4.3",
     "@angular/platform-browser-dynamic": "^4.4.3",
     "@angular/router": "^4.4.3",
+    "@ngrx/effects": "^4.0.5",
     "@ngrx/store": "^4.0.3",
     "babel-runtime": "^6.26.0",
     "bootstrap": "^3.3.7",

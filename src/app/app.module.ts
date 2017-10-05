@@ -5,6 +5,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import {StoreModule} from '@ngrx/store';
+import {EffectsModule} from '@ngrx/effects';
+import {AuthEffects} from './shopping/auth/store/auth.effects';
 
 // App
 import { AppComponent } from './app.component';
@@ -69,7 +71,6 @@ import { TestformComponent } from './assignment6/testform/testform.component';
 import { ReactiveformComponent } from './assignment7/reactiveform/reactiveform.component';
 
 // Shopping
-import { ShoppingComponent } from './shopping/shopping.component';
 import {ShoppingModule} from './shopping/shopping.module';
 import {reducers} from './shopping/store/shopping.reducers';
 
@@ -115,7 +116,8 @@ import { ApphomeComponent } from './apphome/apphome.component';
     Assignment4Module, // Assignment 4
     Assignment5Module, // Assignment 5
     ShoppingModule, // Shopping
-    StoreModule.forRoot(reducers)
+    StoreModule.forRoot(reducers),
+    EffectsModule.forRoot([AuthEffects])
   ],
   providers: [
     AccountsService, // Section 9
