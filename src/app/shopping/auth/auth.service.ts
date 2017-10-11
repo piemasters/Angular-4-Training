@@ -47,7 +47,6 @@ export class AuthenticateService {
 
     logout() {
         firebase.auth().signOut();
-        this.store.dispatch(new AuthActions.Logout());
     }
 
 }

@@ -1,9 +1,9 @@
-import {AuthenticateService} from '../../auth/auth.service';
 import {DataStorageService} from '../../shared/data-storage.service';
 import {Component, OnInit} from '@angular/core';
 import {Store} from '@ngrx/store';
 import * as fromShopping from '../../store/shopping.reducers';
 import * as fromAuth from '../../auth/store/auth.reducers';
+import * as AuthActions from '../../auth/store/auth.actions';
 import {Observable} from 'rxjs/Observable';
 
 @Component({
@@ -17,7 +17,6 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private dataStorageService: DataStorageService,
-    public authService: AuthenticateService,
     private store: Store<fromShopping.AppState>
   ) { }
 
@@ -38,7 +37,8 @@ export class HeaderComponent implements OnInit {
   }
 
   onLogout() {
-    this.authService.logout();
+    this.store.dispatch(new AuthActions.Logout());
+
   }
 
 }
