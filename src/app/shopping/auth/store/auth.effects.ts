@@ -1,11 +1,12 @@
 import {Actions, Effect} from '@ngrx/effects';
 import {Injectable} from '@angular/core';
 import * as AuthActions from './auth.actions';
+import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/mergeMap';
 import * as firebase from 'firebase';
-import { fromPromise} from 'rxjs/observable/fromPromise';
+import {fromPromise} from 'rxjs/observable/fromPromise';
 import {Router} from '@angular/router';
 
 @Injectable()
@@ -16,7 +17,7 @@ export class AuthEffects {
     .map((action: AuthActions.TrySignup) => {
       return action.payload;
     })
-    .switchMap((authData: {username: string, password: string}) => {
+    .switchMap((authData: { username: string, password: string }) => {
       return fromPromise(firebase.auth().createUserWithEmailAndPassword(authData.username, authData.password));
     })
     .switchMap(() => {
@@ -40,14 +41,14 @@ export class AuthEffects {
     .map((action: AuthActions.TrySignup) => {
       return action.payload;
     })
-    .switchMap((authData: {username: string, password: string}) => {
+    .switchMap((authData: { username: string, password: string }) => {
       return fromPromise(firebase.auth().signInWithEmailAndPassword(authData.username, authData.password));
     })
     .switchMap(() => {
       return fromPromise(firebase.auth().currentUser.getIdToken());
     })
     .mergeMap((token: string) => {
-    this.router.navigate(['/shopping']);
+      this.router.navigate(['/shopping']);
       return [
         {
           type: AuthActions.SIGNIN
@@ -59,5 +60,14 @@ export class AuthEffects {
       ];
     });
 
-  constructor(private actions$: Actions, private router: Router) {}
+  @Effect({dispatch: false})
+  authLogout = this.actions$
+    .ofType(AuthActions.LOGOUT)
+    .do(() => {
+      this.router.navigate(['/shopping']);
+    });
+
+
+  constructor(private actions$: Actions, private router: Router) {
+  }
 }

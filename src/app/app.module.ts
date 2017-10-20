@@ -73,11 +73,15 @@ import { ReactiveformComponent } from './assignment7/reactiveform/reactiveform.c
 // Shopping
 import {ShoppingModule} from './shopping/shopping.module';
 import {reducers} from './shopping/store/shopping.reducers';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import {StoreDevtoolsModule} from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 // Shared
 import { AuthGuard } from './auth-guard.service';
 import { AuthService } from './auth.service';
 import { ApphomeComponent } from './apphome/apphome.component';
+
 
 
 @NgModule({
@@ -117,7 +121,9 @@ import { ApphomeComponent } from './apphome/apphome.component';
     Assignment5Module, // Assignment 5
     ShoppingModule, // Shopping
     StoreModule.forRoot(reducers),
-    EffectsModule.forRoot([AuthEffects])
+    EffectsModule.forRoot([AuthEffects]),
+    StoreRouterConnectingModule,
+    !environment.production ? StoreDevtoolsModule.instrument() : []
   ],
   providers: [
     AccountsService, // Section 9
