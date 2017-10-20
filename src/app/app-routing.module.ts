@@ -12,10 +12,12 @@ import {Section15Component} from './section15/section15.component';
 import {Section17Component} from './section17/section17.component';
 import {HttpComponent} from './section18/http/http.component';
 import {ApphomeComponent} from './apphome/apphome.component';
+import {ShoppingComponent} from './shopping/shopping.component';
 
 const appRoutes: Routes = [
   { path: '', component: ApphomeComponent },
   { path: 'shopping', loadChildren: './shopping/shopping.module#ShoppingModule' },
+  // { path: 'shopping', component: ShoppingComponent},
   { path: 'assignment4', component: Assignment4Component },
   { path: 'assignment5', component: Assignment5Component },
   { path: 'assignment6', component: TestformComponent },

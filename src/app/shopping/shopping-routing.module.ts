@@ -8,8 +8,9 @@ import {RecipesComponent} from './recipes/recipes.component';
 
 const shoppingRoutes: Routes = [
   { path: '', component: ShoppingComponent,  children: [
-    { path: '', component: HomeComponent },
-    { path: 'recipes', component: RecipesComponent }, //  loadChildren: './recipes/recipe.module#RecipesModule'},
+    { path: '', component: HomeComponent},
+    { path: 'recipes', component: RecipesComponent },
+    // { path: 'recipes', loadChildren: './recipes/recipes.module#RecipesModule' },
     { path: 'shopping-list', component: ShoppingListComponent},
   ]}
 ];

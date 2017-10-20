@@ -71,10 +71,10 @@ import { TestformComponent } from './assignment6/testform/testform.component';
 import { ReactiveformComponent } from './assignment7/reactiveform/reactiveform.component';
 
 // Shopping
-import {ShoppingModule} from './shopping/shopping.module';
-import {reducers} from './shopping/store/shopping.reducers';
+import { ShoppingModule } from './shopping/shopping.module';
+import { reducers } from './shopping/store/shopping.reducers';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
-import {StoreDevtoolsModule} from '@ngrx/store-devtools';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 
 // Shared

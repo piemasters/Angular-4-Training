@@ -6,7 +6,7 @@ import {SharedModule} from '../shared/shared.module';
 import {ShoppingListModule} from './shopping-list/shopping-list.module';
 import {AuthenticateModule} from './auth/auth.module';
 import {CoreModule} from './core/core.module';
-import {RecipesModule} from './recipes/recipe.module';
+import {RecipesModule} from './recipes/recipes.module';
 
 @NgModule({
   declarations: [
