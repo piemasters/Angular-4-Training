@@ -1,10 +1,10 @@
-import {DataStorageService} from '../../shared/data-storage.service';
 import {Component, OnInit} from '@angular/core';
+import {Observable} from 'rxjs/Observable';
 import {Store} from '@ngrx/store';
 import * as fromShopping from '../../store/shopping.reducers';
 import * as fromAuth from '../../auth/store/auth.reducers';
 import * as AuthActions from '../../auth/store/auth.actions';
-import {Observable} from 'rxjs/Observable';
+import * as RecipeActions from '../../recipes/store/recipe.actions';
 
 @Component({
   selector: 'app-header',
@@ -16,7 +16,6 @@ export class HeaderComponent implements OnInit {
   authState: Observable<fromAuth.State>;
 
   constructor(
-    private dataStorageService: DataStorageService,
     private store: Store<fromShopping.AppState>
   ) { }
 
@@ -25,20 +24,15 @@ export class HeaderComponent implements OnInit {
   }
 
   onSaveData() {
-    this.dataStorageService.storeRecipes().subscribe(
-      (response) => {
-        console.log(response);
-      }
-    );
+    this.store.dispatch((new RecipeActions.StoreRecipes()));
   }
 
   onFetchData() {
-    this.dataStorageService.getRecipes();
+    this.store.dispatch(new RecipeActions.FetchRecipe());
   }
 
   onLogout() {
     this.store.dispatch(new AuthActions.Logout());
-
   }
 
 }
