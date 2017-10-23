@@ -22,11 +22,11 @@ import { Section5Module } from './section5/section5.module';
 
 // Section 7
 import { Section7Component } from './section7/section7.component';
-import { Section7Module } from 'app/section7/section7.module';
+import { Section7Module } from './section7/section7.module';
 
 // Section 9
 import { Section9Component } from './section9/section9.component';
-import { Section9Module } from 'app/section9/section9.module';
+import { Section9Module } from './section9/section9.module';
 import { LoggingService } from './section9/shared/logging.service';
 import { AccountsService } from './section9/shared/accounts.service';
 
@@ -103,7 +103,7 @@ import { ApphomeComponent } from './apphome/apphome.component';
     ReactiveformComponent, // Assignment 7
   ],
   imports: [
-    BrowserModule.withServerTransition({appId: 'my-universal-app'}), // Angular
+    BrowserModule.withServerTransition({appId: 'my-app'}), // Angular
     HttpModule, // Angular
     HttpClientModule,
     AppRoutingModule, // Angular
