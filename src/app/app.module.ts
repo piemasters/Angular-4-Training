@@ -103,7 +103,7 @@ import { ApphomeComponent } from './apphome/apphome.component';
     ReactiveformComponent, // Assignment 7
   ],
   imports: [
-    BrowserModule, // Angular
+    BrowserModule.withServerTransition({appId: 'my-universal-app'}), // Angular
     HttpModule, // Angular
     HttpClientModule,
     AppRoutingModule, // Angular
