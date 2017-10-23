@@ -12,7 +12,7 @@ import {Section15Component} from './section15/section15.component';
 import {Section17Component} from './section17/section17.component';
 import {HttpComponent} from './section18/http/http.component';
 import {ApphomeComponent} from './apphome/apphome.component';
-import {ShoppingComponent} from './shopping/shopping.component';
+import {Section26Component} from './section26/section26.component';
 
 const appRoutes: Routes = [
   { path: '', component: ApphomeComponent },
@@ -29,6 +29,7 @@ const appRoutes: Routes = [
   { path: 'section15', component: Section15Component },
   { path: 'section17', component: Section17Component },
   { path: 'section18', component: HttpComponent },
+  { path: 'section26', component: Section26Component },
   // {path: '**', redirectTo: '/not-found'} // Ensure this is the last path
 ];
 

@@ -4,9 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
-import {StoreModule} from '@ngrx/store';
-import {EffectsModule} from '@ngrx/effects';
-import {AuthEffects} from './shopping/auth/store/auth.effects';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { AuthEffects } from './shopping/auth/store/auth.effects';
 
 // App
 import { AppComponent } from './app.component';
@@ -54,6 +55,10 @@ import { Section17Module } from './section17/section17.module';
 import { HttpComponent } from './section18/http/http.component';
 import { ServerService } from './section18/http/server.service';
 
+// Section 26
+import { Section26Component } from './section26/section26.component';
+import {Section26Module} from './section26/section26.module';
+
 // Assignment 4
 import { Assignment4Component } from './assignment4/assignment4.component';
 import { Assignment4Module } from './assignment4/assignment4.module';
@@ -97,6 +102,7 @@ import { ApphomeComponent } from './apphome/apphome.component';
     Section15Component, // Section 15
     Section17Component, // Section 17
     HttpComponent, // Section 18
+    Section26Component,  // Section 26
     Assignment4Component, // Assignment 4
     Assignment5Component, // Assignment 5
     TestformComponent, // Assignment 6
@@ -104,6 +110,7 @@ import { ApphomeComponent } from './apphome/apphome.component';
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}), // Angular
+    BrowserAnimationsModule,
     HttpModule, // Angular
     HttpClientModule,
     AppRoutingModule, // Angular
@@ -117,6 +124,7 @@ import { ApphomeComponent } from './apphome/apphome.component';
     Section13Module, // Section 13
     Section15Module, // Section 15
     Section17Module, // Section 17
+    Section26Module, // Section 17
     Assignment4Module, // Assignment 4
     Assignment5Module, // Assignment 5
     ShoppingModule, // Shopping
