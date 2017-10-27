@@ -13,15 +13,32 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
       })),
       state('highlighted', style({
         'background-color': 'blue',
+        transform: 'translateX(100px) scale(1)'
+      })),
+      transition('normal <=> highlighted', animate(300)),
+    ]),
+    trigger('wildState', [
+      state('normal', style({
+        'background-color': 'red',
+        transform: 'translateX(0) scale(1)'
+      })),
+      state('highlighted', style({
+        'background-color': 'blue',
         transform: 'translateX(100px)'
       })),
+      state('shrunken', style({
+        'background-color': 'green',
+        transform: 'translateX(0px) scale(0.5)'
+      })),
       transition('normal => highlighted', animate(300)),
-      transition('highlighted => normal', animate(800))
+      transition('highlighted => normal', animate(800)),
+      transition('shrunken <=> *', animate(500))
     ])
   ]
 })
 export class AnimationsComponent implements OnInit {
   state = 'normal';
+  wildState = 'normal';
   list = ['Milk', 'Sugar', 'Bread'];
 
   constructor() { }
@@ -39,10 +56,11 @@ export class AnimationsComponent implements OnInit {
 
   onAnimate() {
     this.state === 'normal' ? this.state = 'highlighted' : this.state = 'normal';
+    this.wildState === 'normal' ? this.wildState = 'highlighted' : this.wildState = 'normal';
   }
 
   onShrink() {
-    console.log('test');
+    this.wildState = 'shrunken';
   }
 
 }
