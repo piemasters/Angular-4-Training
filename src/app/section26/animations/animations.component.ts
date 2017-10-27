@@ -36,7 +36,7 @@ export class AnimationsComponent implements OnInit {
   }
 
   onAnimate() {
-    console.log('test');
+    this.state === 'normal' ? this.state = 'highlighted' : this.state = 'normal';
   }
 
   onShrink() {
