@@ -32,7 +32,15 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
       })),
       transition('normal => highlighted', animate(300)),
       transition('highlighted => normal', animate(800)),
-      transition('shrunken <=> *', animate(500))
+      transition('shrunken <=> *', [
+        style({
+        'background-color': 'orange'
+        }),
+        animate(1000, style({
+          borderRadius: '50px'
+        })),
+        animate(500)
+      ])
     ])
   ]
 })
@@ -41,7 +49,8 @@ export class AnimationsComponent implements OnInit {
   wildState = 'normal';
   list = ['Milk', 'Sugar', 'Bread'];
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
@@ -62,5 +71,4 @@ export class AnimationsComponent implements OnInit {
   onShrink() {
     this.wildState = 'shrunken';
   }
-
 }
