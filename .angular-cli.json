@@ -40,6 +40,7 @@
       ],
       "index": "index.html",
       "main": "main.server.ts",
+
       "test": "test.ts",
       "tsconfig": "tsconfig.server.json",
       "testTsconfig": "tsconfig.spec.json",

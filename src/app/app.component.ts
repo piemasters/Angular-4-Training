@@ -7,6 +7,7 @@ import * as firebase from 'firebase';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  title = 'Angular-4-Training';
 
   constructor() {}
 

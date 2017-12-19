@@ -10,32 +10,32 @@ import { RecipeStartComponent } from './recipe-start/recipe-start.component';
 import { RecipesComponent } from './recipes.component';
 import { NgModule } from '@angular/core';
 import { ShoppingRoutingModule } from '../shopping-routing.module';
-import {StoreModule} from '@ngrx/store';
-import {recipeReducer} from './store/recipe.reducers';
-import {EffectsModule} from '@ngrx/effects';
-import {RecipeEffects} from './store/recipe.effects';
+import { StoreModule } from '@ngrx/store';
+import { recipeReducer } from './store/recipe.reducers';
+import { EffectsModule } from '@ngrx/effects';
+import { RecipeEffects } from './store/recipe.effects';
 
 @NgModule({
-    declarations: [
-        RecipesComponent,
-        RecipeStartComponent,
-        RecipeListComponent,
-        RecipeEditComponent,
-        RecipeDetailComponent,
-        RecipeItemComponent,
-    ],
-    imports: [
-        CommonModule,
-        ReactiveFormsModule,
-        RecipesRoutingModule,
-        SharedModule,
-        ShoppingRoutingModule,
-        StoreModule.forFeature('recipes', recipeReducer),
-        EffectsModule.forFeature([RecipeEffects])
-    ],
-    exports: [
-       ShoppingRoutingModule
-    ]
+  declarations: [
+    RecipesComponent,
+    RecipeStartComponent,
+    RecipeListComponent,
+    RecipeEditComponent,
+    RecipeDetailComponent,
+    RecipeItemComponent,
+  ],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    RecipesRoutingModule,
+    SharedModule,
+    ShoppingRoutingModule,
+    StoreModule.forFeature('recipes', recipeReducer),
+    EffectsModule.forFeature([RecipeEffects])
+  ],
+  exports: [
+    ShoppingRoutingModule
+  ]
 })
 export class RecipesModule {
 
