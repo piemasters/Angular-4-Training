@@ -57,7 +57,11 @@ import { ServerService } from './section18/http/server.service';
 
 // Section 26
 import { Section26Component } from './section26/section26.component';
-import {Section26Module} from './section26/section26.module';
+import { Section26Module } from './section26/section26.module';
+
+// Section 27
+import { Section27Component } from './section27/section27.component';
+import { Section27Module } from './section27/section27.module';
 
 // Assignment 4
 import { Assignment4Component } from './assignment4/assignment4.component';
@@ -103,6 +107,7 @@ import { ApphomeComponent } from './apphome/apphome.component';
     Section17Component, // Section 17
     HttpComponent, // Section 18
     Section26Component,  // Section 26
+    Section27Component, // Section 27
     Assignment4Component, // Assignment 4
     Assignment5Component, // Assignment 5
     TestformComponent, // Assignment 6
@@ -124,7 +129,8 @@ import { ApphomeComponent } from './apphome/apphome.component';
     Section13Module, // Section 13
     Section15Module, // Section 15
     Section17Module, // Section 17
-    Section26Module, // Section 17
+    Section26Module, // Section 26
+    Section27Module, // Section 27
     Assignment4Module, // Assignment 4
     Assignment5Module, // Assignment 5
     ShoppingModule, // Shopping

@@ -13,6 +13,7 @@ import {Section17Component} from './section17/section17.component';
 import {HttpComponent} from './section18/http/http.component';
 import {ApphomeComponent} from './apphome/apphome.component';
 import {Section26Component} from './section26/section26.component';
+import {Section27Component} from './section27/section27.component';
 
 const appRoutes: Routes = [
   { path: '', component: ApphomeComponent },
@@ -30,6 +31,7 @@ const appRoutes: Routes = [
   { path: 'section17', component: Section17Component },
   { path: 'section18', component: HttpComponent },
   { path: 'section26', component: Section26Component },
+  { path: 'section27', component: Section27Component },
   // {path: '**', redirectTo: '/not-found'} // Ensure this is the last path
 ];
 
