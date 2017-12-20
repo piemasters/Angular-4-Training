@@ -1,6 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { UnitTestComponent } from './unit-test.component';
 import { UnitTestUserService } from './user.service';
+import { UnitTestDataService } from '../shared/data.service';
 
 describe('UnitTestComponent', () => {
 
@@ -44,5 +45,25 @@ describe('UnitTestComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('p').textContent).not.toContain(app.user.name);
   });
+
+  it('should\'t fetch data successfully if not called asynchronously', () => {
+    const fixture = TestBed.createComponent(UnitTestComponent);
+    const app = fixture.debugElement.componentInstance;
+    const dataService = fixture.debugElement.injector.get(UnitTestDataService);
+    const spy = spyOn(dataService, 'getDetails').and.returnValue(Promise.resolve('Data'));
+    fixture.detectChanges();
+    expect(app.data).toBe(undefined);
+  });
+
+  it('should fetch data successfully if called asynchronously', async(() => {
+    const fixture = TestBed.createComponent(UnitTestComponent);
+    const app = fixture.debugElement.componentInstance;
+    const dataService = fixture.debugElement.injector.get(UnitTestDataService);
+    const spy = spyOn(dataService, 'getDetails').and.returnValue(Promise.resolve('Data'));
+    fixture.detectChanges();
+    fixture.whenStable().then(() => {
+      expect(app.data).toBe('Data');
+    });
+  }));
 
 });
