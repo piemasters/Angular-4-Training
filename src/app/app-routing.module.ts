@@ -1,4 +1,4 @@
-import {Routes, RouterModule, PreloadAllModules} from '@angular/router';
+import {Routes, RouterModule} from '@angular/router';
 import { NgModule } from '@angular/core';
 import {Assignment4Component} from './assignment4/assignment4.component';
 import {Assignment5Component} from './assignment5/assignment5.component';
@@ -37,7 +37,8 @@ const appRoutes: Routes = [
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(appRoutes, {preloadingStrategy: PreloadAllModules})
+        RouterModule.forRoot(appRoutes)
+        // RouterModule.forRoot(appRoutes, {preloadingStrategy: PreloadAllModules})
         // RouterModule.forRoot(appRoutes, {useHash: true})
     ],
     exports: [RouterModule]

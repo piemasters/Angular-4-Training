@@ -114,7 +114,7 @@ import { ApphomeComponent } from './apphome/apphome.component';
     ReactiveformComponent, // Assignment 7
   ],
   imports: [
-    BrowserModule.withServerTransition({appId: 'my-app'}), // Angular
+    BrowserModule.withServerTransition({appId: 'angular-training'}), // Angular
     BrowserAnimationsModule,
     HttpModule, // Angular
     HttpClientModule,

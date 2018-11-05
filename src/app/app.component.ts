@@ -9,6 +9,9 @@ import * as firebase from 'firebase';
 export class AppComponent implements OnInit {
   title = 'Angular-4-Training';
 
+  /**
+   * @ignore
+   */
   constructor() {}
 
   ngOnInit() {
